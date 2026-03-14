@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+    <head>
+    <html lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Desarrollo Web Full Stack - InnovaTec</title>
+    <style>
+        /* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    line-height: 1.6;
+    color: #00008b;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Main container */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Sección introducción */
+#sectIntroduccion {
+    padding: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+#verMas {
+    display:none; 
+
+}
+/* MOBILE FIRST - Diseño para celulares */
+.tipoTaller {
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    margin: 10px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 5px solid #00008b;
+}
+
+.tipoTaller h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color: white;
+}
+
+.disabled {
+    pointer-events: none;
+    text-decoration: none;
+}
+
+    /* Artículos de talleres - Mobile First */
+.datosTaller {
+    background: #00008b;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+}
+
+.datosTaller h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.datosTaller p {
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    flex-grow: 1;
+}
+
+/* Botones centrados */
+.datosTaller button {
+    background-color: #c0c0c0;
+    color: #ffffff;
+        border: 5px solid #ffffff;
+    margin: 0 auto;
+    display: block;
+}
+
+.datosTaller a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #00008b;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+footer article p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer h6 {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+
+/* TABLET - Media Query para dispositivos medianos */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    button, select {
+        font-size: 16px;
+        min-width: 150px;
+        padding: 12px 20px;
+    }
+
+    main {
+        padding: 2rem;
+    }
+    
+    #sectIntroduccion {
+        padding: 3rem;
+        margin-bottom: 15px;
+    }
+    
+    .tipoTaller {
+        padding: 2.5rem;
+        margin: 15px 0;
+    }
+    
+    .tipoTaller h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Container para los artículos en tablet */
+    .tipoTaller {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tipoTaller > :not(h2) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    
+    .datosTaller {
+        flex: 0 1 calc(50% - 10px);
+        margin: 5px;
+        min-height: 280px;
+    }
+    
+    .datosTaller h3 {
+        font-size: 1.4rem;
+    }
+    
+    .datosTaller button {
+        min-width: 160px;
+        padding: 14px 35px;
+    }
+}
+
+/* LAPTOP/PC - Media Query para dispositivos grandes */
+@media (min-width: 1024px) {
+    header {
+        padding: 3rem 2rem;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    main {
+        padding: 3rem;
+    }
+    
+    #sectIntroduccion {
+        padding: 4rem;
+        margin-bottom: 20px;
+    }
+    
+    #sectIntroduccion p {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    .tipoTaller {
+        padding: 3rem;
+        margin: 20px 0;
+    }
+    
+    .tipoTaller h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    /* 3 columnas para laptop/PC */
+    .datosTaller {
+        flex: 0 1 calc(33.333% - 10px);
+        margin: 5px;
+        min-height: 320px;
+    }
+    
+    .datosTaller h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .datosTaller p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .datosTaller button {
+        min-width: 170px;
+        padding: 15px 40px;
+        font-size: 1.1rem;
+    }
+    
+    footer {
+        padding: 3rem 2rem;
+    }
+}
+
+/* DESKTOP EXTRA LARGE - Para pantallas muy grandes */
+@media (min-width: 1200px) {
+    /* 4 columnas para pantallas extra grandes */
+    .datosTaller {
+        flex: 0 1 calc(25% - 10px);
+        min-height: 300px;
+    }
+    
+    main {
+        max-width: 1400px;
+    }
+}
+
+/* Mejoras adicionales de UX */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Enfoque mejorado para accesibilidad */
+button:focus,
+a:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+    </style>
+    <script>
+            let semanas = [{id: "S1", dato: "Semana 1", fecha: "2025-09-01"},
+            {id: "S2", dato: "Semana 2", fecha: "2025-09-08"},
+            {id: "S3", dato: "Semana 3", fecha: "2025-09-20"},
+            {id: "S4", dato: "Semana 4", fecha: "2025-09-24"},
+{id: "S5", dato: "Semana 5", fecha: "2025-09-29"},
+            {id: "S6", dato: "Semana 6", fecha: "2025-10-20"},
+            {id: "S7", dato: "Semana 7", fecha: "2025-10-27"}];
+
+        let datosSesiones = [{id: "S1", sesion: "s1", titulo: "Sesión 1", descripcion: "Introducción a HTML5 y estructura global.", audio: "https://drive.google.com/file/d/1VXFNBiguhWAitAlJlzezenfkVWyKegmX/view", pdf: "https://drive.google.com/file/d/1WuhWpSq-cwSiusGl9_lh694VzEiNsaRn/view", codigo: "https://drive.google.com/file/d/1Ce4TV2YWk7GS1cYe9BUHOTZp7jvZnZ-V/view"},
+        {id: "S1", sesion: "s2", titulo: "Sesión 2", descripcion: "Estructura del cuerpo.", audio: "https://drive.google.com/file/d/1Sz2yWyHZEqivytplEdpM6zhpZSbt-X-y/view", pdf: "https://drive.google.com/drive/folders/1yIvbfNcQd9Xj8YKN_w7kpB2T65FHZfJ3", codigo: "https://drive.google.com/file/d/1vllAAViW09_QSh-H_-V5Syuw6fDbe9Sv/view"},
+        {id: "S1", sesion: "s3", titulo: "Sesión 3", descripcion: "Etiquetas básicas - Parte 1.", audio: "https://drive.google.com/file/d/1o6OmAMplM1V_EJNAbbMym458Bs_7gTvQ/view", pdf: "https://drive.google.com/file/d/13ESL1WsG8wNrm8zEs7NUB11AXF2Sg4JV/view", codigo: "https://drive.google.com/file/d/1UCyKYN3ntdnHstVaf_wbJvelzW6JHZYl/view"},
+        {id: "S2", sesion: "s4", titulo: "Sesión 4", descripcion: "Etiquetas básicas - Parte 2.", audio: "https://drive.google.com/file/d/1g9T16yEonmG8p1ykJa4gY2Nwwa6vdHYN/view", pdf: "https://drive.google.com/file/d/1HUIMIVFisw7QaPbBdgrEmz18HsXmAbUH/view", codigo: "https://drive.google.com/file/d/1SaOiPc1DBY__MoIzkvvA7zCLSUvVRRC4/view"},
+        {id: "S2", sesion: "s5", titulo: "Sesión 5", descripcion: "Reforzamiento - Práctica 1", audio: "", pdf: "", codigo: ""},
+        {id: "S2", sesion: "s6", titulo: "Sesión 6", descripcion: "Etiquetas básicas - Parte 3.", audio: "https://drive.google.com/file/d/18xbHSGqa-Yjalbb1MyT3fMrd0dxuez3I/view", pdf: "https://drive.google.com/file/d/1A1Gcq9woAfxhJDXLtT58k1UWE0oIn44p/view", codigo: "https://drive.google.com/file/d/1vMnS_AGWUKOku-E-D8XGX6Ht_n6Qpsra/view"},
+        {id: "S3", sesion: "s7", titulo: "Sesión 7", descripcion: "Continuando con etiquetas básicas - Parte 3.", audio: "", pdf: "", codigo: "https://drive.google.com/file/d/1vMnS_AGWUKOku-E-D8XGX6Ht_n6Qpsra/view"},
+        {id: "S3", sesion: "s8", titulo: "Sesión 8", descripcion: "Etiquetas adicionales.", audio: "https://drive.google.com/file/d/1xkwrQKYUeVewdDJvJ_kIplqpdzSiBcc2/view", pdf: "https://drive.google.com/file/d/1yTnLRTQYWxJwvYEQc1IDFD3ydmf_aTKk/view", codigo: ""},
+        {id: "S3", sesion: "s9", titulo: "Sesión 9", descripcion: "Creando formularios.", audio: "https://drive.google.com/file/d/1-A8qHYJ_JGNVsFzN6o8e4fAX3Fv_OnZf/view", pdf: "https://drive.google.com/file/d/1xe83NhNUoMplFQCXATlbw3CxELI6QEnw/view", codigo: "https://drive.google.com/file/d/1vWqHtWIVLgiyYSW4KgnECRgHzYDfw4vh/view"},
+        {id: "S4", sesion: "s10", titulo: "Sesión 10", descripcion: "Atributos de accesibilidad.", audio: "https://drive.google.com/file/d/1-YGM0DFj2BEr8hFv0SniN8WgdqlU_qkW/view", pdf: "https://drive.google.com/file/d/1XT34YXaRyz_CeGce9UtknIgChyqaKEUy/view", codigo: "https://drive.google.com/file/d/1sz6wUsfzFX92BAC3_m_RiFg9xiXwkubg/view"},
+        {id: "S4", sesion: "s11", titulo: "Sesión 11", descripcion: "Introducción de CSS3 y colores.", audio: "https://drive.google.com/file/d/1exKzkdkQ0l8hikk55FTwGPCLILAqA0WL/view", pdf: "https://drive.google.com/file/d/1OrIahRcfuS1o1Lq2CTvTLLC87Ec2nHHX/view", codigo: "https://drive.google.com/file/d/1NBIPTLDs8CvmbBX5Nqfpl8bp53PSa0vW/view"},
+        {id: "S4", sesion: "s12", titulo: "Sesión 12", descripcion: "Estilo de texto.", audio: "https://drive.google.com/file/d/1M1mAMue3x5C_VMr_KbiFg59_dfDqJkXW/view", pdf: "https://drive.google.com/file/d/1ttxyKMhhFwn40JfPNAO_rnBoMnaTbde7/view", codigo: "https://drive.google.com/file/d/1-75aqxSwpBGMHTjjGr6072rfu25gN90e/view"},
+        {id: "S5", sesion: "s13", titulo: "Sesión 13", descripcion: "Borde, dimensión y margen.", audio: "https://drive.google.com/file/d/1_CdiIPV9m4n2cCLxoXtPmQ3VaAQgh_LI/view", pdf: "https://drive.google.com/file/d/1levLmO5xSMijVpElYgVWPSyZyrP9FoXQ/view", codigo: "https://drive.google.com/file/d/1KJK4CmmVVQmz7sS3FC04lN59g_WO7U6H/view"},
+        {id: "S5", sesion: "s14", titulo: "Sesión 14", descripcion: "Estilos en objetos.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""},
+        {id: "S5", sesion: "s15", titulo: "Sesión 15", descripcion: "Práctica 3 y reforzamiento.", audio: "", pdf: "", codigo: ""},
+        {id: "S6", sesion: "s16", titulo: "Sesión 16", descripcion: "Creación de barra de navegación.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""},
+        {id: "S6", sesion: "s17", titulo: "Sesión 17", descripcion: "Reforzamiento y práctica 3.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""},
+        {id: "S6", sesion: "s18", titulo: "Sesión 18", descripcion: "Animaciones y transiciones.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""}];
+
+        function sesionesDW() {
+            for (let semana = 0; semana < semanas.length; semana++) {
+        document.write("<section id='sect" + semanas[semana].id + "' class='tipoTaller'>");
+                document.write("<h2>" + semanas[semana].dato + "</h2>");
+                const fechaHoy = new Date();
+                const fechaInicio = new Date(semanas[semana].fecha);
+                if (fechaHoy - fechaInicio > 6 * 24 * 60 * 60 * 1000) {
+    document.write("<p>Finalizado.</p>");
+                } else if (fechaHoy - fechaInicio <= 0) {
+    document.write("<p>Por iniciar.</p>");
+                } else {
+                for (let sesion = 0; sesion < datosSesiones.length; sesion++) {
+                    if (semanas[semana].id == datosSesiones[sesion].id) {
+                    document.write("<article class='datosTaller'>");
+                    document.write("<h3>" + datosSesiones[sesion].titulo + ": " + datosSesiones[sesion].descripcion + "</h3>");
+                    document.write("<ul><li><a href='" + datosSesiones[sesion].audio + "' class='" + datosSesiones[sesion].sesion + "' target='_blank'>✔ Reproducir audio</a></li><li><a href='" + datosSesiones[sesion].pdf + "' class='" + datosSesiones[sesion].sesion + "' target='_blank'>✔ Revisar PDF</a></li><li><a href='" + datosSesiones[sesion].codigo + "' class='" + datosSesiones[sesion].sesion + "' target='_blank'>✔ Verificar códigos</a></li></ul>");
+                    document.write("</article>");
+                    }
+                }
+                }
+                document.write("</section>");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+    <h1>🚀 ¡TALLER DESARROLLADOR FULL-STACK! 💻</h1>
+    <p>¿Ya sabes crear una página web pero sientes que te falta el motor?<br>
+    ¿Quieres pasar de simples sitios web a Aplicaciones Empresariales reales? 🏗️<br>
+   Este 2026, el ecosistema web no espera a nadie. Por eso, hemos diseñado un Taller Intensivo de Inmersión Total donde te llevaremos de la mano para dominar el stack que las empresas están buscando.</p>
+</header>
+<main>
+    <section>
+        <article>
+           <h2>🎯 ¿Por qué este taller es para ti?</h2>
+            <ul>
+                <li>✅ No necesitas ser experto: Si ya conoces lo básico de etiquetas y estilos, aquí reforzaremos tu base y te daremos la lógica de programación que te falta.</li>
+                <li>✅ Metodología 100% Práctica: Menos teoría aburrida, más líneas de código.</li>
+                <li>✅ Proyecto Real: Al finalizar las 24 sesiones, habrás construido una plataforma funcional de nivel profesional.</li>
+            </ul>
+        </article>
+        <article>
+            <h2>📚 Rutas de aprendizaje (24 Sesiones de Alto Impacto)</h2>
+            <h3>🔹 MÓDULO 1: Arquitectura y Diseño Pro (8 Sesiones)</h3>
+            <p>Domina HTML5 semántico, formularios avanzados y diseño responsivo para que tu web se vea perfecta en cualquier dispositivo. 📱</p>
+            <h3>🔹 MÓDULO 2: El Cerebro de la Web - JavaScript (8 Sesiones)</h3>
+            <p>Aprende Programación Orientada a Objetos (POO), lógica de eventos y manipulación de datos. ¡Dale vida y funcionalidad a tus interfaces! 🧠</p>
+            <h3>🔹 MÓDULO 3: El Poder del Servidor - NodeJS (8 Sesiones)</h3>
+            <p>Crea tu propio backend con Express, gestiona bases de datos y domina el CRUD. Aprenderás cómo se conectan los datos en una aplicación real. 🔌</p>
+        </article>
+        <article>
+            <h2>🛠️ Detalles del taller:</h2>
+                <p>📅 Inicio: 30 de marzo de 2026 -  📅 Fin: 30 de abril de 2026.</br>
+                ⏰ Horario: Lunes a Viernes de 6:00 pm a 9:00 pm.</br>
+               📍 Plataforma: Clases en vivo vía Google Meet.</p>
+        </article>
+        <article>
+            <h2>⚠️ REQUISITO:</h2>
+            <p>Solo necesitas tu computadora, una conexión estable y el 100% de tu disposición para transformar tu carrera. 📈</p>
+            <h3>🔥 ¡NO TE QUEDES FUERA!</h3>
+            <p>El mundo digital se construye con código. Asegura tu lugar y conviértete en el desarrollador que las empresas necesitan hoy mismo.</br>
+            👇 Regístrate aquí y asegura tu cupo:</br>
+            <iframe></iframe>
+
+            ¡Nos vemos en la primera línea de código! 👨‍💻👩‍💻</p>
+        </article>
+    </section>
+</main>
+<footer>
+    <section>
+        <article>
+            <h6>&copy; InnovaTec 2026</h6>
+        </article>
+</section>
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    const sesiones = [{id: "s1", inicio: new Date("2025-09-01T00:00:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s2", inicio: new Date("2025-09-05T18:00:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s3", inicio: new Date("2025-09-08T18:00:00"), fin: new Date("2025-09-16T23:59:59")},
+      {id: "s4", inicio: new Date("2025-09-08T18:00:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s5", inicio: new Date("2025-09-16T23:59:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s6", inicio: new Date("2025-09-12T18:00:00"), fin: new Date("2025-09-16T23:59:59")},
+      {id: "s7", inicio: new Date("2025-09-15T18:00:00"), fin: new Date("2025-09-21T23:59:59")}, {id: "s8", inicio: new Date("2025-09-17T18:00:00"), fin: new Date("2025-09-21T23:59:59")}, {id: "s9", inicio: new Date("2025-09-19T18:00:00"), fin: new Date("2025-09-23T23:59:59")},
+      {id: "s10", inicio: new Date("2025-09-22T18:00:00"), fin: new Date("2025-09-30T23:59:59")}, {id: "s11", inicio: new Date("2025-09-24T18:00:00"), fin: new Date("2025-09-30T23:59:59")}, {id: "s12", inicio: new Date("2025-09-26T18:00:00"), fin: new Date("2025-09-30T23:59:59")},
+      {id: "s13", inicio: new Date("2025-09-29T18:00:00"), fin: new Date("2025-10-06T06:00:00")}, {id: "s14", inicio: new Date("2025-10-01T18:00:00"), fin: new Date("2025-10-06T06:00:00")}, {id: "s15", inicio: new Date("2025-10-03T18:00:00"), fin: new Date("2025-10-06T06:00:00")},
+      {id: "s16", inicio: new Date("2025-10-20T18:00:00"), fin: new Date("2025-10-26T23:59:00")}, {id: "s17", inicio: new Date("2025-10-22T18:00:00"), fin: new Date("2025-10-26T23:59:00")}, {id: "s18", inicio: new Date("2025-10-25T18:00:00"), fin: new Date("2025-10-26T23:59:00")},
+      {id: "s19", inicio: new Date("2025-10-27T18:00:00"), fin: new Date("2025-10-31T23:59:00")}, {id: "s20", inicio: new Date("2025-10-29T18:00:00"), fin: new Date("2025-10-31T23:59:00")}];
+
+    function actualizarEstadoSesiones() {
+        const ahora = new Date();
+
+        sesiones.forEach(sesion => {
+            const enlaces = document.getElementsByClassName(sesion.id); // HTMLCollection
+
+            for (let i = 0; i < enlaces.length; i++) {
+                const enlace = enlaces[i];
+                if (ahora >= sesion.inicio && ahora <= sesion.fin) {
+                enlace.classList.remove("disabled");
+                enlace.setAttribute("aria-disabled", "false");
+                enlace.setAttribute("tabindex", "0");
+                } else {
+                    enlace.classList.add("disabled");
+                    enlace.setAttribute("aria-disabled", "true");
+                    enlace.setAttribute("tabindex", "-1");
+                }
+            }
+        });
+    }
+
+    actualizarEstadoSesiones();
+    setInterval(actualizarEstadoSesiones, 60000);
+</script>
+    <body>
+</body>
+</html>
