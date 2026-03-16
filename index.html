@@ -16,7 +16,7 @@ body {
   color: #00008b;
   margin: 0;
   padding: 5px 10px;
-  font-family: Calibri, Arial;
+  font-family: Calibri, Arial, sans-serif;
 }
 
 /* h1 centrado y llamativo */
@@ -152,65 +152,10 @@ iframe {
 }
 
     </style>
-    <script>
-            let semanas = [{id: "S1", dato: "Semana 1", fecha: "2025-09-01"},
-            {id: "S2", dato: "Semana 2", fecha: "2025-09-08"},
-            {id: "S3", dato: "Semana 3", fecha: "2025-09-20"},
-            {id: "S4", dato: "Semana 4", fecha: "2025-09-24"},
-{id: "S5", dato: "Semana 5", fecha: "2025-09-29"},
-            {id: "S6", dato: "Semana 6", fecha: "2025-10-20"},
-            {id: "S7", dato: "Semana 7", fecha: "2025-10-27"}];
-
-        let datosSesiones = [{id: "S1", sesion: "s1", titulo: "Sesión 1", descripcion: "Introducción a HTML5 y estructura global.", audio: "https://drive.google.com/file/d/1VXFNBiguhWAitAlJlzezenfkVWyKegmX/view", pdf: "https://drive.google.com/file/d/1WuhWpSq-cwSiusGl9_lh694VzEiNsaRn/view", codigo: "https://drive.google.com/file/d/1Ce4TV2YWk7GS1cYe9BUHOTZp7jvZnZ-V/view"},
-        {id: "S1", sesion: "s2", titulo: "Sesión 2", descripcion: "Estructura del cuerpo.", audio: "https://drive.google.com/file/d/1Sz2yWyHZEqivytplEdpM6zhpZSbt-X-y/view", pdf: "https://drive.google.com/drive/folders/1yIvbfNcQd9Xj8YKN_w7kpB2T65FHZfJ3", codigo: "https://drive.google.com/file/d/1vllAAViW09_QSh-H_-V5Syuw6fDbe9Sv/view"},
-        {id: "S1", sesion: "s3", titulo: "Sesión 3", descripcion: "Etiquetas básicas - Parte 1.", audio: "https://drive.google.com/file/d/1o6OmAMplM1V_EJNAbbMym458Bs_7gTvQ/view", pdf: "https://drive.google.com/file/d/13ESL1WsG8wNrm8zEs7NUB11AXF2Sg4JV/view", codigo: "https://drive.google.com/file/d/1UCyKYN3ntdnHstVaf_wbJvelzW6JHZYl/view"},
-        {id: "S2", sesion: "s4", titulo: "Sesión 4", descripcion: "Etiquetas básicas - Parte 2.", audio: "https://drive.google.com/file/d/1g9T16yEonmG8p1ykJa4gY2Nwwa6vdHYN/view", pdf: "https://drive.google.com/file/d/1HUIMIVFisw7QaPbBdgrEmz18HsXmAbUH/view", codigo: "https://drive.google.com/file/d/1SaOiPc1DBY__MoIzkvvA7zCLSUvVRRC4/view"},
-        {id: "S2", sesion: "s5", titulo: "Sesión 5", descripcion: "Reforzamiento - Práctica 1", audio: "", pdf: "", codigo: ""},
-        {id: "S2", sesion: "s6", titulo: "Sesión 6", descripcion: "Etiquetas básicas - Parte 3.", audio: "https://drive.google.com/file/d/18xbHSGqa-Yjalbb1MyT3fMrd0dxuez3I/view", pdf: "https://drive.google.com/file/d/1A1Gcq9woAfxhJDXLtT58k1UWE0oIn44p/view", codigo: "https://drive.google.com/file/d/1vMnS_AGWUKOku-E-D8XGX6Ht_n6Qpsra/view"},
-        {id: "S3", sesion: "s7", titulo: "Sesión 7", descripcion: "Continuando con etiquetas básicas - Parte 3.", audio: "", pdf: "", codigo: "https://drive.google.com/file/d/1vMnS_AGWUKOku-E-D8XGX6Ht_n6Qpsra/view"},
-        {id: "S3", sesion: "s8", titulo: "Sesión 8", descripcion: "Etiquetas adicionales.", audio: "https://drive.google.com/file/d/1xkwrQKYUeVewdDJvJ_kIplqpdzSiBcc2/view", pdf: "https://drive.google.com/file/d/1yTnLRTQYWxJwvYEQc1IDFD3ydmf_aTKk/view", codigo: ""},
-        {id: "S3", sesion: "s9", titulo: "Sesión 9", descripcion: "Creando formularios.", audio: "https://drive.google.com/file/d/1-A8qHYJ_JGNVsFzN6o8e4fAX3Fv_OnZf/view", pdf: "https://drive.google.com/file/d/1xe83NhNUoMplFQCXATlbw3CxELI6QEnw/view", codigo: "https://drive.google.com/file/d/1vWqHtWIVLgiyYSW4KgnECRgHzYDfw4vh/view"},
-        {id: "S4", sesion: "s10", titulo: "Sesión 10", descripcion: "Atributos de accesibilidad.", audio: "https://drive.google.com/file/d/1-YGM0DFj2BEr8hFv0SniN8WgdqlU_qkW/view", pdf: "https://drive.google.com/file/d/1XT34YXaRyz_CeGce9UtknIgChyqaKEUy/view", codigo: "https://drive.google.com/file/d/1sz6wUsfzFX92BAC3_m_RiFg9xiXwkubg/view"},
-        {id: "S4", sesion: "s11", titulo: "Sesión 11", descripcion: "Introducción de CSS3 y colores.", audio: "https://drive.google.com/file/d/1exKzkdkQ0l8hikk55FTwGPCLILAqA0WL/view", pdf: "https://drive.google.com/file/d/1OrIahRcfuS1o1Lq2CTvTLLC87Ec2nHHX/view", codigo: "https://drive.google.com/file/d/1NBIPTLDs8CvmbBX5Nqfpl8bp53PSa0vW/view"},
-        {id: "S4", sesion: "s12", titulo: "Sesión 12", descripcion: "Estilo de texto.", audio: "https://drive.google.com/file/d/1M1mAMue3x5C_VMr_KbiFg59_dfDqJkXW/view", pdf: "https://drive.google.com/file/d/1ttxyKMhhFwn40JfPNAO_rnBoMnaTbde7/view", codigo: "https://drive.google.com/file/d/1-75aqxSwpBGMHTjjGr6072rfu25gN90e/view"},
-        {id: "S5", sesion: "s13", titulo: "Sesión 13", descripcion: "Borde, dimensión y margen.", audio: "https://drive.google.com/file/d/1_CdiIPV9m4n2cCLxoXtPmQ3VaAQgh_LI/view", pdf: "https://drive.google.com/file/d/1levLmO5xSMijVpElYgVWPSyZyrP9FoXQ/view", codigo: "https://drive.google.com/file/d/1KJK4CmmVVQmz7sS3FC04lN59g_WO7U6H/view"},
-        {id: "S5", sesion: "s14", titulo: "Sesión 14", descripcion: "Estilos en objetos.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""},
-        {id: "S5", sesion: "s15", titulo: "Sesión 15", descripcion: "Práctica 3 y reforzamiento.", audio: "", pdf: "", codigo: ""},
-        {id: "S6", sesion: "s16", titulo: "Sesión 16", descripcion: "Creación de barra de navegación.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""},
-        {id: "S6", sesion: "s17", titulo: "Sesión 17", descripcion: "Reforzamiento y práctica 3.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""},
-        {id: "S6", sesion: "s18", titulo: "Sesión 18", descripcion: "Animaciones y transiciones.", audio: "https://drive.google.com/file/d/1x6Dh4SZQQb03JoYVZGPXVV-ahdE_lxjW/view", pdf: "https://drive.google.com/file/d/1J89Iv0RFSHiztK_BObhRhZptMwqi9Ad8/view", codigo: ""}];
-
-        function sesionesDW() {
-            for (let semana = 0; semana < semanas.length; semana++) {
-        document.write("<section id='sect" + semanas[semana].id + "' class='tipoTaller'>");
-                document.write("<h2>" + semanas[semana].dato + "</h2>");
-                const fechaHoy = new Date();
-                const fechaInicio = new Date(semanas[semana].fecha);
-                if (fechaHoy - fechaInicio > 6 * 24 * 60 * 60 * 1000) {
-    document.write("<p>Finalizado.</p>");
-                } else if (fechaHoy - fechaInicio <= 0) {
-    document.write("<p>Por iniciar.</p>");
-                } else {
-                for (let sesion = 0; sesion < datosSesiones.length; sesion++) {
-                    if (semanas[semana].id == datosSesiones[sesion].id) {
-                    document.write("<article class='datosTaller'>");
-                    document.write("<h3>" + datosSesiones[sesion].titulo + ": " + datosSesiones[sesion].descripcion + "</h3>");
-                    document.write("<ul><li><a href='" + datosSesiones[sesion].audio + "' class='" + datosSesiones[sesion].sesion + "' target='_blank'>✔ Reproducir audio</a></li><li><a href='" + datosSesiones[sesion].pdf + "' class='" + datosSesiones[sesion].sesion + "' target='_blank'>✔ Revisar PDF</a></li><li><a href='" + datosSesiones[sesion].codigo + "' class='" + datosSesiones[sesion].sesion + "' target='_blank'>✔ Verificar códigos</a></li></ul>");
-                    document.write("</article>");
-                    }
-                }
-                }
-                document.write("</section>");
-            }
-        }
-
-    </script>
 </head>
 <body>
     <header>
     <h1>TALLER DESARROLLADOR FULL-STACK</h1>
-    <!--<p>¿Ya sabes crear una página web pero sientes que te falta el motor?<br>
-    ¿Quieres pasar de simples sitios web a Aplicaciones Empresariales reales? 🏗️<br></p>-->
    <p class="text">Este 2026, el ecosistema web no espera a nadie. Por eso, hemos diseñado un Taller Intensivo donde te llevaremos de la mano para dominar el stack que las empresas están buscando.</p>
 </header>
 <main>
@@ -257,40 +202,5 @@ iframe {
         </article>
 </section>
 </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-    const sesiones = [{id: "s1", inicio: new Date("2025-09-01T00:00:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s2", inicio: new Date("2025-09-05T18:00:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s3", inicio: new Date("2025-09-08T18:00:00"), fin: new Date("2025-09-16T23:59:59")},
-      {id: "s4", inicio: new Date("2025-09-08T18:00:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s5", inicio: new Date("2025-09-16T23:59:00"), fin: new Date("2025-09-16T23:59:59")}, {id: "s6", inicio: new Date("2025-09-12T18:00:00"), fin: new Date("2025-09-16T23:59:59")},
-      {id: "s7", inicio: new Date("2025-09-15T18:00:00"), fin: new Date("2025-09-21T23:59:59")}, {id: "s8", inicio: new Date("2025-09-17T18:00:00"), fin: new Date("2025-09-21T23:59:59")}, {id: "s9", inicio: new Date("2025-09-19T18:00:00"), fin: new Date("2025-09-23T23:59:59")},
-      {id: "s10", inicio: new Date("2025-09-22T18:00:00"), fin: new Date("2025-09-30T23:59:59")}, {id: "s11", inicio: new Date("2025-09-24T18:00:00"), fin: new Date("2025-09-30T23:59:59")}, {id: "s12", inicio: new Date("2025-09-26T18:00:00"), fin: new Date("2025-09-30T23:59:59")},
-      {id: "s13", inicio: new Date("2025-09-29T18:00:00"), fin: new Date("2025-10-06T06:00:00")}, {id: "s14", inicio: new Date("2025-10-01T18:00:00"), fin: new Date("2025-10-06T06:00:00")}, {id: "s15", inicio: new Date("2025-10-03T18:00:00"), fin: new Date("2025-10-06T06:00:00")},
-      {id: "s16", inicio: new Date("2025-10-20T18:00:00"), fin: new Date("2025-10-26T23:59:00")}, {id: "s17", inicio: new Date("2025-10-22T18:00:00"), fin: new Date("2025-10-26T23:59:00")}, {id: "s18", inicio: new Date("2025-10-25T18:00:00"), fin: new Date("2025-10-26T23:59:00")},
-      {id: "s19", inicio: new Date("2025-10-27T18:00:00"), fin: new Date("2025-10-31T23:59:00")}, {id: "s20", inicio: new Date("2025-10-29T18:00:00"), fin: new Date("2025-10-31T23:59:00")}];
-
-    function actualizarEstadoSesiones() {
-        const ahora = new Date();
-
-        sesiones.forEach(sesion => {
-            const enlaces = document.getElementsByClassName(sesion.id); // HTMLCollection
-
-            for (let i = 0; i < enlaces.length; i++) {
-                const enlace = enlaces[i];
-                if (ahora >= sesion.inicio && ahora <= sesion.fin) {
-                enlace.classList.remove("disabled");
-                enlace.setAttribute("aria-disabled", "false");
-                enlace.setAttribute("tabindex", "0");
-                } else {
-                    enlace.classList.add("disabled");
-                    enlace.setAttribute("aria-disabled", "true");
-                    enlace.setAttribute("tabindex", "-1");
-                }
-            }
-        });
-    }
-
-    actualizarEstadoSesiones();
-    setInterval(actualizarEstadoSesiones, 60000);
-</script>
-    <body>
 </body>
 </html>
